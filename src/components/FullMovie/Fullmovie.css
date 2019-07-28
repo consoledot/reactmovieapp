@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+img {
+  width: 100%;
+}

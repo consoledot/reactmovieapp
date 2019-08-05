@@ -23,7 +23,7 @@ class App extends Component {
       .get(
         `http://www.omdbapi.com/?s=${
         this.state.searchText
-        }&plot=full&apikey=e51cc621&page=${this.state.page}`
+        }&plot=full&apikey={your_api_key_here}&page=${this.state.page}`
       )
       .then(movie => {
         console.log(movie.data);
@@ -43,22 +43,12 @@ class App extends Component {
   nextPage = (pageNumber) => {
     this.setState({ page: pageNumber })
 
-    // axios
-    //   .get(
-    //     `http://www.omdbapi.com/?s=${
-    //     this.state.searchText
-    //     }&plot=full&apikey=e51cc621&page=${pageNumber}`
-    //   )
-    //   .then(movie => {
-    //     console.log(movie.data.Search);
-    //     this.setState({ movie: movie.data.Search, page: pageNumber });
-    //   })
-    //   .catch(err => console.log(err));
+  
   };
   movieInfo = id => {
     axios.get(`http://www.omdbapi.com/?i=${
       id
-      }&plot=full&apikey=e51cc621`)
+      }&plot=full&apikey={your_api_key_here}`)
       .then(res => {
         this.setState({ currentMovie: res.data })
       })
